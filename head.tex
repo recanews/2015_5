@@ -1,0 +1,55 @@
+\pagestyle{empty}
+
+% wstawienie numerów stron w ramki dynamiczne frameD-1a i frameD-1b
+\begin{dynamiccontents*}{frameD-1a}
+\begin{tikzpicture}
+\draw(0,0) node [fill=black, minimum width=2cm, minimum height=2cm]{
+{\sffamily\bfseries\Huge\color{white}\thepage}
+};
+\end{tikzpicture}
+\end{dynamiccontents*}
+
+\begin{dynamiccontents*}{frameD-1b}
+\begin{tikzpicture}
+\draw(0,0) node [fill=black, minimum width=2cm, minimum height=2cm]{
+{\sffamily \bfseries\Huge\color{white}\thepage}
+};
+\end{tikzpicture}
+\end{dynamiccontents*}
+
+
+% wstawienie grafiki w ramkię statyczną frameS-1a
+\begin{staticcontents*}{frameS-1a}
+\includegraphics[width=1\textwidth]{\theimage}
+\end{staticcontents*}
+
+% wypełnienie tekstem ramki statycznej frameS-1b
+\begin{staticcontents*}{frameS-1b}
+\begin{tikzpicture}
+\draw(0,0) node [fill=white, text width=13cm, inner sep=5mm, opacity=0.7]{
+\large\sffamily
+{\fontsize{70}{30}\selectfont {\color{black} RECANEWS}}\\
+
+
+{\fontsize{30}{30}\selectfont {\color{black} Volumen 5}}\\
+\begin{center}
+{\fontsize{30}{30}\selectfont {\color{black} Llamada a publicaciones}}\\
+\end{center}
+\begin{flushright}
+{\fontsize{30}{30}\selectfont {\color{black} Mayo 2015}}
+\end{flushright}
+};
+\end{tikzpicture}
+\end{staticcontents*}
+
+
+% wlanie tekstu do wszystkich ramek typu flow
+
+
+
+\newpage
+
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\arabic{subsection}}
+

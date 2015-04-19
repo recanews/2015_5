@@ -1,0 +1,57 @@
+
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{microtype}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\usepackage[pdftex]{hyperref}
+
+\hypersetup{pdfauthor={J. S. Castellanos-Durán},pdftitle={RECANEWS Volumen 3 - Marzo 2015},colorlinks,linkcolor=black,urlcolor=blue}
+
+\usepackage[paperwidth=210mm, paperheight=297mm, textwidth=160mm, textheight=240mm, bindingoffset=1cm]{geometry}
+
+
+% obliczenie szerokości lewego marginesu
+\usepackage{calc}
+\newlength{\lmargin}
+\setlength{\lmargin}{1in + \hoffset + \oddsidemargin}
+
+\usepackage{flowfram}
+
+\usepackage{color}
+
+\usepackage{tikz}
+\usepackage{anyfontsize}
+
+% definicja ramek typu flow umieszczonych na stonie 1
+\newflowframe[1]{8cm}{24\baselineskip}{-.50cm}{0\baselineskip}[frame1-1a]
+\newflowframe[1]{8cm}{23\baselineskip}{8.5cm}{0\baselineskip}[frame1-2b]
+%\newflowframe[1]{5cm}{27\baselineskip}{11cm}{0\baselineskip}[frame1-3c]
+
+%definicja ramek statycznych wstawianych na stronie 1
+\newstaticframe[1]{\paperwidth}{14cm}{-\lmargin}{12.5cm}[frameS-1a]
+\newstaticframe[1]{14cm}{7\baselineskip}{0cm}{45\baselineskip}[frameS-1b]
+
+%definicja ramki dymamicznej wstawiania na stonie nieparzystej
+\newdynamicframe[odd]{2cm}{2cm}{-\lmargin}{6cm}[frameD-1a]
+%definicja ramki dymamicznej wstawiania na stonie parzystej
+\newdynamicframe[even]{2cm}{2cm}{\textwidth+\lmargin-2cm}{6cm}[frameD-1b]
+
+% definicja ramek typu flow na kolejnych stronach
+\newflowframe[>1]{8cm}{57\baselineskip}{-.50cm}{0\baselineskip}[frame2-1a]
+\newflowframe[>1]{8cm}{57\baselineskip}{8.5cm}{0\baselineskip}[frame2-2a]
+%\newflowframe[>1]{5cm}{57\baselineskip}{11cm}{0\baselineskip}[frame2-3a]
+
+\definecolor{green}{rgb}{0.6,0.8,0.1}
+\definecolor{cafe}{rgb}{0.8,0.2,0.2}
+
+\title{RECANEWS Volumen 5 - Mayo 2015}
+\author{J. Sebastián Castellanos Durán}
+\date{\relax}
+
